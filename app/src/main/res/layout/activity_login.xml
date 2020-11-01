@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="#444444"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/high">
+        <RelativeLayout
+            android:id="@+id/score_relative1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/log"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="登录界面"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:src="@drawable/main_pic"
+        android:layout_marginTop="10dp" />
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="account"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="10"
+        android:textSize="30dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:maxLines="1"
+        android:background="@drawable/logtv"/>
+    <EditText
+        android:id="@+id/passage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="passage"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="@drawable/logtv"/>
+    <ImageButton
+        android:id="@+id/firstart"
+        android:layout_marginTop="15dp"
+        android:layout_width="100dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:layout_height="80dp"
+        android:src="@drawable/rightblue"
+        android:background="#444444"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal">
+        <ImageButton
+            android:id="@+id/qq"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/qq"
+            android:background="#444444"
+            android:layout_marginRight="5dp"/>
+        <ImageButton
+            android:id="@+id/weixin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/weixin"
+            android:layout_toRightOf="@id/qq"
+            android:background="#444444"
+            android:scaleType="centerInside"/>
+    </RelativeLayout>
+
+</LinearLayout>

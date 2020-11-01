@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:background="#B8F1C4"
+    android:padding="10dp"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/shape"
-        android:padding="5dp"
-        android:backgroundTint="#f5f5f5">
+        android:background="@drawable/inp"
+        android:padding="5dp">
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -18,101 +19,153 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="输入成绩"
+            android:layout_marginTop="7dp"
             android:textColor="@color/black"
             android:textSize="30dp"
-           android:layout_centerInParent="true"/>
-        <Button
-            android:id="@+id/mainRBtnJump"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Btn"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:background="@drawable/btn_main"
-            android:layout_alignParentRight="true"/>
+           android:layout_centerHorizontal="true"/>
 
+        <ImageButton
+            android:id="@+id/mainRBtnJump"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/inp"
+            android:scaleType="centerInside"
+            android:src="@drawable/double_right" />
     </RelativeLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/lian"/>
 
     <TextView
-        android:id="@+id/mainTVMath"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="高等\n数学"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:background="@drawable/tv_math"
-        android:layout_alignParentLeft="true"
-        android:layout_centerInParent="true"/>
-
-    <EditText
-        android:id="@+id/mainETmath"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="2"
-        android:layout_toRightOf="@+id/mainTVMath"
-        android:layout_centerInParent="true"
-        android:backgroundTint="#000000"/>
+        android:text="请输入科目名称以及对应成绩:"
+        android:textColor="#ffffff"
+        android:background="#33775c"
+        android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/mainTVEnglish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="大学\n英语"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:background="@drawable/tv_english"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/mainTVMath"/>
-
-    <EditText
-        android:id="@+id/mainETEnglish"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="2"
-        android:layout_above="@+id/mainETmath"
-        android:layout_toRightOf="@+id/mainTVEnglish"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <EditText
+            android:id="@+id/mainTVEnglish"
+            android:layout_width="140dp"
+            android:background="@drawable/inptv"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:hint="科目名称"
+            android:maxLength="10"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/mainETEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:background="@drawable/inptv"
+            android:textSize="20sp"
+            android:maxLength="4"
+            android:hint="请输入成绩"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/mainTVComputer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="程序\n设计"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:background="@drawable/tv_computer"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/mainTVMath"/>
-
-    <EditText
-        android:id="@+id/mainETComputer"
+    <LinearLayout
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mainETmath"
-        android:lines="2"
-        android:layout_toRightOf="@+id/mainTVComputer"
-        />
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/mainTVMath"
+            android:layout_width="140dp"
+            android:maxLength="10"
+            android:background="@drawable/inptv"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:hint="科目名称"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/mainETmath"
+            android:background="@drawable/inptv"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLength="4"
+            android:hint="请输入成绩"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/mainTVTTechnique"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="技术\n导论"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:background="@drawable/shape"
-        android:backgroundTint="#4196cf"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/mainTVComputer"/>
-
-    <EditText
-        android:id="@+id/mainETTechnique"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="2"
-        android:layout_below="@+id/mainETComputer"
-        android:layout_toRightOf="@+id/mainTVTTechnique"
-        />
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/mainTVTTechnique"
+            android:layout_width="140dp"
+            android:background="@drawable/inptv"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:hint="科目名称"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/mainETTechnique"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:maxLength="4"
+            android:background="@drawable/inptv"
+            android:hint="请输入成绩"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/mainTVComputer"
+            android:layout_width="140dp"
+            android:background="@drawable/inptv"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:hint="科目名称"
+            android:maxLength="10"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/mainETComputer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:background="@drawable/inptv"
+            android:hint="请输入成绩"/>
+    </LinearLayout>
 
 
-</RelativeLayout>
+
+</LinearLayout>
